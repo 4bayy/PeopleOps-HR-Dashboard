@@ -5,15 +5,15 @@ export default function Header() {
     <header className="flex items-center justify-between p-4 lg:hidden md:hidden">
       <button>
         {" "}
-        <Menu />{" "}
+        <Menu className=" text-foreground" />{" "}
       </button>
-      <h1>PeopleOps</h1>
+      <h1 className=" text-foreground">PeopleOps</h1>
       <button>
         {" "}
-        <Bell />{" "}
+        <Bell className=" text-foreground" />{" "}
       </button>
       <button>
-        <User />
+        <User className=" text-foreground" />
       </button>
     </header>
   );

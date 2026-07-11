@@ -41,7 +41,7 @@ console.log(emp); // Employee object
 
       {/* Tabs */}
       <div className="flex gap-6 border-b border-border px-4">
-        <button className="border-b-2 border-primary py-4 font-medium text-primary">
+        <button className="border-b-2 border-primary py-4 font-medium text-active-text">
           Profile
         </button>
 
@@ -53,7 +53,7 @@ console.log(emp); // Employee object
       </div>
 
       {/* Personal Information */}
-      <div className="p-4 border border-gray-200 mt-4 rounded ">
+      <div className="p-4  mt-4 rounded ">
         <div className="rounded-2xl bg-card p-5">
           <h3 className="mb-6 text-lg font-semibold">Personal Information</h3>
 
@@ -87,7 +87,7 @@ console.log(emp); // Employee object
 
       {/* Bottom Buttons */}
       <div className="space-y-4 p-4">
-        <Button className="w-full rounded-xl bg-teal-400 py-4 font-semibold text-black hover:bg-teal-500">
+        <Button className="w-full rounded-xl bg-active-text py-4 font-semibold text-black hover:bg-teal-500">
           Edit Profile
         </Button>
 

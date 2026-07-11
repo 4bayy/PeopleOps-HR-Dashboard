@@ -5,18 +5,18 @@ import { departments } from "../../../data/employee";
 import { useState } from "react";
 import { Plus } from "lucide-react";
 import { employee } from "../../../data/employee";
-
+import EmployeeTabletTable from "./components/TabletUserTable";
 
 export default function UserPage() {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
 
-  const [isOpen , setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className=" flex h-screen flex-col bg-background">
+    <div className="flex  h-screen flex-col ">
       {/*  mobile  */}
-      <SearchBar className="border" placeholder="Search employees..." />
-      <div className="mt-4 flex flex-wrap gap-2 ">
+      <SearchBar className="border md:hidden" placeholder="Search employees..." />
+      <div className="mt-4 flex flex-wrap gap-2  ">
         {departments.map((item) => {
           const isSelected = selectedDepartment === item.title;
           return (
@@ -28,7 +28,7 @@ export default function UserPage() {
           ${
             isSelected
               ? "bg-primary text-black"
-              : "bg-white text-black hover:bg-gray-100"
+              : "bg-card text-foreground hover:bg-gray-100"
           }
         `}
             >
@@ -37,14 +37,29 @@ export default function UserPage() {
           );
         })}
       </div>
-      {/* Employee List */}
-      <div className="flex-1  overflow-y-auto px-4">
-        {employee.map((emp)=>(
-        <EmployeeCard  className="mt-[20px]"  setIsOpen={setIsOpen} employeeName={emp.name}
-        employeeId = {emp.id} designation={emp.designation}
-        />
+      {/* Employee  Mobile List */}
+      <div className="flex-1 overflow-y-auto px-4 md:hidden">
+        {employee.map((emp) => (
+          <EmployeeCard
+            className="mt-[20px] bg-card"
+            setIsOpen={setIsOpen}
+            employeeName={emp.name}
+            employeeId={emp.id}
+            designation={emp.designation}
+          />
         ))}
       </div>
+
+      {/* Tablet & Desktop */}
+      <div className="  hidden md:block mt-4 rounded ">
+        {/* {employee.map((emp)=>(
+        <EmployeeCard  className="mt-[20px]"  setIsOpen={setIsOpen} employeeName={emp.name}
+        employeeId = {emp.id} designation={emp.designati on}
+        />
+        ))} */}
+        <EmployeeTabletTable employee={employee}></EmployeeTabletTable>
+      </div>
+
       <Button
         className="
     mb-20

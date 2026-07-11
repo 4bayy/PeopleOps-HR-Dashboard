@@ -2,8 +2,18 @@
 
 @theme {
   --color-primary: #FBBF24;
-  --color-primary-hover: #F59E0B;
 
-  --color-secondary: #343434;
-  --color-background: #F8F9FA;
+  /* Layout */
+  --color-background: #222020;
+  
+  /* Cards */
+  --color-card: #333333;       
+  --color-border: #444444;   
+
+  /* text */
+  --color-foreground: #ffffff;
+
+  /* profile  */
+  --color-profile : #FFFFFF;
+  --color-active-text: #2DD4BF;
 }

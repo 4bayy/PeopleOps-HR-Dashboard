@@ -17,8 +17,7 @@ export default function AppLayout() {
   
   
   return (
-    <div className="min-h-screen">
-
+    <div className="min-h-screen bg-background">
 
       {!hideHeader && <Header />}
       <div className="flex">
