@@ -1,11 +1,15 @@
 import { Menu, Bell, User } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
+
+  const [isMenuOpen , setIsMenuOpen] = useState(false);
+
   return (
     <header className="flex items-center justify-between p-4 lg:hidden md:hidden">
       <button>
         {" "}
-        <Menu className=" text-foreground" />{" "}
+        <Menu className=" text-foreground"  onClick={()=> setIsMenuOpen(true)}/>{" "}
       </button>
       <h1 className=" text-foreground">PeopleOps</h1>
       <button>

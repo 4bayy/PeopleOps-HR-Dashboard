@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "../layout/AppLayout";
 import Home from "../features/dashboard/home";
 import User from "../features/dashboard/user";
-import EmployeeDetails from "../features/dashboard/user/components/EmployeeDetails";
+import EmployeeProfile from "../features/dashboard/user/pages/EmployeeProfile";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/employee/:id",
-        element: <EmployeeDetails />,
+        element: <EmployeeProfile />,
       },
     ],
   },

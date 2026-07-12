@@ -1,5 +1,7 @@
 import { BarChart3, Calendar, ChartNoAxesColumn, Settings, UserPlus } from "lucide-react";
 import { Users } from "lucide-react";
+
+
 export const stats = [
   {
     title: "Employees",
@@ -26,6 +28,39 @@ export const stats = [
   //   screens: ["tablet", "desktop"],
   // },
 ];
+
+export   const activities = [
+  {
+    id: 1,
+    name: "Sarah Chen",
+    action: "joined Engineering",
+    time: "2 hours ago",
+    badge: "Joined",
+    badgeColor: "bg-teal-900 text-teal-400",
+  },
+  {
+    id: 2,
+    name: "James Wilson",
+    action: "promoted to Tech Lead",
+    time: "5 hours ago",
+    badge: "Promoted",
+    badgeColor: "bg-yellow-900 text-yellow-400",
+  },
+];
+
+export const  desktopStats = [
+  ...stats ,
+  {
+    title: "On Leave",
+    value: 12,
+    screens: ["tablet", "desktop"],
+  },
+  {
+    title: "New This Month",
+    value: 5,
+    screens: ["tablet", "desktop"],
+  },
+]
 
 export const quickActions = [
 
@@ -144,3 +179,28 @@ export const departmentDistribution = [
 
   { id: 3, value: 0, label: "Marketing", color: "#FBBF24" },
 ];
+
+
+export const departmentOptions = [
+  { value: "engineering", label: "Engineering" },
+  { value: "marketing", label: "Marketing" },
+  { value: "hr", label: "HR" },
+];
+
+export const employmentTypeOptions = [
+  { value: "full-time", label: "Full Time" },
+  { value: "part-time", label: "Part Time" },
+  { value: "contract", label: "Contract" },
+];
+
+export const managerOptions = [
+  { value: "sarah-chen", label: "Sarah Chen" },
+  { value: "michael-ross", label: "Michael Ross" },
+];
+
+export const salaryBandOptions = [
+  { value: "l1", label: "L1" },
+  { value: "l2", label: "L2" },
+  { value: "l3", label: "L3" },
+];
+

@@ -1,11 +1,11 @@
-import { departmentDistribution } from "../data/employee";
+import { departmentDistribution } from "../../../../data/employee";
 import { PieChart } from "@mui/x-charts/PieChart";
 
 export default function DepartmentDistribution({ title }) {
   const data = departmentDistribution;
 
   return (
-    <div className=" rounded-2xl bg-card p-6  ">
+    <div className="rounded-2xl bg-card p-6  ">
       <h2 className="mb-4 text-xl font-semibold">{title}</h2>
 
       <div className="grid grid-cols-2 ">

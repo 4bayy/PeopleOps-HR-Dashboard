@@ -9,12 +9,18 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import {  useNavigate } from "react-router-dom";
+export default function EmployeeList({ employee }) {
 
-export default function EmployeeTabletTable({ employee }) {
+  const navigate = useNavigate();
+
+  console.log(employee)
+
   return (
     <TableContainer
       component={Paper}
       sx={{
+        cursor:"pointer",
         backgroundColor: "#333333",
         borderRadius: "16px",
         border: "1px solid #444444",
@@ -47,7 +53,7 @@ export default function EmployeeTabletTable({ employee }) {
                 },
               }}
             >
-              <TableCell sx={cellStyle}>
+              <TableCell sx={cellStyle}  onClick={() => navigate(`/employee/${emp.id}`)}>
                 <div className="flex items-center gap-3">
                   <Avatar
                     sx={{

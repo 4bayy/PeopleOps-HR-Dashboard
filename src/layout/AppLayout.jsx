@@ -2,37 +2,42 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import BottomNavigation from "./BottomNavigation";
 import navigationItems from "./navigation.js";
-import Header from "./Header.js";
+import Header from "./Header";
 import Sidebar from "./Sidebar.jsx";
 import { useLocation } from "react-router-dom";
-
+import DesktopHeader from "./DesktopHeader.jsx";
 
 export default function AppLayout() {
-
   const [collapsed, setCollapsed] = useState(false);
+  
   const currentPage = useLocation();
 
-  const hideHeader = ["/user", "/employee/id"].includes(location.pathname) || location.pathname.startsWith("/employee/");
+
+
+  const pathName = location.pathname.slice(1,) || "Dashboard";
+  const formatted =
+  pathName.charAt(0).toUpperCase() + pathName.slice(1);
+
+  const hideHeader =
+    ["/user", "/employee/id"].includes(location.pathname) ||
+    location.pathname.startsWith("/employee/");
 
   
-  
+
   return (
     <div className="min-h-screen bg-background">
-
       {!hideHeader && <Header />}
-      <div className="flex">
 
-        {/* Desktop Sidebar */}
-        <Sidebar navItems={navigationItems} />
+      <div className="flex h-screen bg-background">
+        <Sidebar />
 
-        {/* Main Content */}
-        <main className="flex-1 pt-16 pb-16 md:ml-24 lg:ml-64 lg:pb-0">
+        <main className="flex-1 overflow-y-auto">
           <div className="p-6">
+            <DesktopHeader section="Overview" title={formatted} />
             <Outlet />
           </div>
         </main>
       </div>
-
       {/*  mobile view */}
       <BottomNavigation navItems={navigationItems} />
     </div>
