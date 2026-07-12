@@ -61,7 +61,7 @@ export default function EmployeeProfile() {
 
       {/*  need to split below section to components  in future */}
 
-      <div className="grid grid-cols-2">
+      <div className="md:grid grid-cols-2">
         {/* Personal Information */}
         <div className="p-4  mt-4 rounded ">
           <div className="rounded-2xl bg-card p-5">
