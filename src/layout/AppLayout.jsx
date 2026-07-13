@@ -24,7 +24,7 @@ export default function AppLayout() {
     <div className="min-h-screen bg-background">
       {!hideHeader && <Header setIsMenuOpen={setIsMenuOpen} />}
 
-      <div className="flex h-screen bg-background">
+      <div className="flex bg-background">
         <Sidebar isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
 
         <main className="flex-1 overflow-y-auto">
