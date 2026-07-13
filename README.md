@@ -1,7 +1,13 @@
 # PeopleOps - Employee Management Dashboard
 
-A modern and responsive Employee Management Dashboard built with React, Vite, React Router, and Tailwind CSS. The application provides an intuitive interface for managing employees, viewing employee profiles, and monitoring HR-related information.
+A modern and responsive Employee Management Dashboard built with **React**, **Vite**, **React Router**, and **Tailwind CSS**. The application provides an intuitive interface for managing employees, viewing employee profiles, and monitoring HR-related information.
 
+## Live Demo
+
+🚀 **Deployed on Vercel:**  
+https://people-ops-hr-dashboard.vercel.app/
+
+Explore the live application to experience the responsive UI and employee management features.
 ---
 
 ## ✨ Features
