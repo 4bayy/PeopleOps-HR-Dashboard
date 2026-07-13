@@ -96,7 +96,7 @@ export default function UserPage() {
             setDepartment={setSelectedDepartment}
             setStatus={setStatus}
           ></EmployeeToolbar>
-          <EmployeeList employee={filteredEmployees}></EmployeeList>
+          <EmployeeList employee={filteredEmployees} setSearchTerm={setSearchTerm}></EmployeeList>
         </div>
       )}
 

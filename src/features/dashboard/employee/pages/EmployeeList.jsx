@@ -12,14 +12,21 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 import { EllipsisVertical } from "lucide-react";
+import NoEmployees  from "../../../common/Errors/NoEmployee";
 
-export default function EmployeeList({ employee }) {
+export default function EmployeeList({ employee, setSearchTerm }) {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   const navigate = useNavigate();
 
   console.log(employee);
+  if (!employee || employee.length === 0){
+    return (
+      <NoEmployees setSearchTerm={setSearchTerm}/>
+    )
+  };
 
   return (
+
     <TableContainer
       component={Paper}
       sx={{
