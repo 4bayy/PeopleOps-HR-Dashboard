@@ -102,7 +102,7 @@ export default function UserPage() {
 
       {/*  float add  btn */}
 
-      <Button className="mb-20 right-6  h-14 w-14 rounded-full bg-primary p-0 shadow-lg z-50 hover:bg-primary/90">
+      <Button className=" md:hidden mb-20 right-6  h-14 w-14 rounded-full bg-primary p-0 shadow-lg z-50 hover:bg-primary/90">
         <Plus className="h-7 w-7 text-black" />
       </Button>
     </div>
