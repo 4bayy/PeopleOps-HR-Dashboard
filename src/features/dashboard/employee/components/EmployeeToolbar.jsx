@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "../../../../components/ui/Search";
-import Dropdown from "../../../../components/ui/DropDown";
+import Dropdown from "../../../../components/ui/Dropdown";
 // import { departments } from "../../../../data/employee";
 
 function EmployeeToolbar({className}) {

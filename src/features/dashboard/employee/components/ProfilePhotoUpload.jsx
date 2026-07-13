@@ -1,5 +1,5 @@
 import { UserPlus } from "lucide-react";
-import Card from "../../../../components/ui/card";
+import Card from "../../../../components/ui/Card";
 
 export default function ProfilePhotoUpload() {
   return (

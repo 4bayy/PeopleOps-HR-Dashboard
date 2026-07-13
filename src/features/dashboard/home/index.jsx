@@ -1,7 +1,7 @@
 import { stats, quickActions } from "../../../data/employee";
 import StatusCard from "../../../components/StatusCard";
 import Button from "../../../components/ui/Button";
-import Card from "../../../components/ui/card";
+import Card from "../../../components/ui/Card";
 import DepartmentDistribution from "./components/DepartmentDistribution";
 import { Plus } from "lucide-react";
 import HeadcountTrend from "./components/HeadCount";
