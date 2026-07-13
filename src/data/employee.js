@@ -116,7 +116,8 @@ export const employee= [
     "status": "Active",
     "email": "s.chen@peopleops.com",
     "phone": "+1 (555) 012-3456",
-    "location": "San Francisco, CA"
+    "location": "San Francisco, CA",
+    "joindate":"Jan 12 2022"
   },
   {
     "id": 2,
@@ -126,7 +127,9 @@ export const employee= [
     "status": "Active",
     "email": "m.ross@peopleops.com",
     "phone": "+1 (555) 234-5678",
-    "location": "New York, NY"
+    "location": "New York, NY",
+        "joindate":"Jan 12 2023"
+
   },
   {
     "id": 3,
@@ -136,7 +139,9 @@ export const employee= [
     "status": "Active",
     "email": "e.gilbert@peopleops.com",
     "phone": "+1 (555) 345-6789",
-    "location": "Austin, TX"
+    "location": "Austin, TX",
+        "joindate":"Jan  01 2022"
+
   },
   {
     "id": 4,
@@ -146,7 +151,9 @@ export const employee= [
     "status": "Inactive",
     "email": "j.wilson@peopleops.com",
     "phone": "+1 (555) 456-7890",
-    "location": "Seattle, WA"
+    "location": "Seattle, WA",
+        "joindate":"Jan 12 2018"
+
   },
   {
     "id": 5,
@@ -156,7 +163,9 @@ export const employee= [
     "status": "Active",
     "email": "e.watson@peopleops.com",
     "phone": "+1 (555) 567-8901",
-    "location": "Chicago, IL"
+    "location": "Chicago, IL",
+    "joindate":"Jan 12 2024"
+
   },
   {
     "id": 6,
@@ -166,7 +175,9 @@ export const employee= [
     "status": "Active",
     "email": "d.miller@peopleops.com",
     "phone": "+1 (555) 678-9012",
-    "location": "Boston, MA"
+    "location": "Boston, MA",
+        "joindate":"Jan 12 2026"
+
   }
 ]
 

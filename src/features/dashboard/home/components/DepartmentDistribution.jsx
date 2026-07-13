@@ -47,10 +47,10 @@ export default function DepartmentDistribution({ title }) {
           {legendData.map((item) => (
             <div key={item.id} className="flex items-center gap-2">
               <span
-                className="h-3 w-3 rounded-sm"
+                className="h-3 w-3 rounded-sm "
                 style={{ backgroundColor: item.color }}
               />
-              <span className="text-sm text-gray-700">{item.label}</span>
+              <span className="text-sm text-foreground">{item.label}</span>
             </div>
           ))}
         </div>

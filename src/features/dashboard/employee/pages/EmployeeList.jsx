@@ -9,18 +9,21 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import {  useNavigate } from "react-router-dom";
-export default function EmployeeList({ employee }) {
+import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
+import { EllipsisVertical } from "lucide-react";
 
+export default function EmployeeList({ employee }) {
+  const isDesktop = useMediaQuery("(min-width:1024px)");
   const navigate = useNavigate();
 
-  console.log(employee)
+  console.log(employee);
 
   return (
     <TableContainer
       component={Paper}
       sx={{
-        cursor:"pointer",
+        cursor: "pointer",
         backgroundColor: "#333333",
         borderRadius: "16px",
         border: "1px solid #444444",
@@ -35,6 +38,13 @@ export default function EmployeeList({ employee }) {
             <TableCell sx={headerStyle}>Department</TableCell>
             <TableCell sx={headerStyle}>Role</TableCell>
             <TableCell sx={headerStyle}>Status</TableCell>
+            <TableCell sx={isDesktop ? headerStyleCell : { display: "none" }}>
+              Join Date
+            </TableCell>
+            <TableCell sx={isDesktop ? headerStyleCell : { display: "none" }}>
+              {" "}
+              Actions{" "}
+            </TableCell>
           </TableRow>
         </TableHead>
 
@@ -53,7 +63,10 @@ export default function EmployeeList({ employee }) {
                 },
               }}
             >
-              <TableCell sx={cellStyle}  onClick={() => navigate(`/employee/${emp.id}`)}>
+              <TableCell
+                sx={cellStyle}
+                onClick={() => navigate(`/employee/${emp.id}`)}
+              >
                 <div className="flex items-center gap-3">
                   <Avatar
                     sx={{
@@ -82,6 +95,14 @@ export default function EmployeeList({ employee }) {
                   }}
                 />
               </TableCell>
+              <TableCell sx={isDesktop ? cellStyle : { display: "none" }}>
+                {emp.joindate}
+              </TableCell>
+              <TableCell sx={isDesktop ? cellStyle : { display: "none" }}>
+                <button className="p-2 rounded hover:bg-gray-700">
+                  <EllipsisVertical size={18} />
+                </button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -91,6 +112,13 @@ export default function EmployeeList({ employee }) {
 }
 
 const headerStyle = {
+  backgroundColor: "#3A3A3A",
+  color: "#A3A3A3", // Muted text
+  fontWeight: 600,
+  borderBottom: "1px solid #444444",
+};
+
+const headerStyleCell = {
   backgroundColor: "#3A3A3A",
   color: "#A3A3A3", // Muted text
   fontWeight: 600,
