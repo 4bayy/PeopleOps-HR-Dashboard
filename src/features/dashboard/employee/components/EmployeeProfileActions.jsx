@@ -3,6 +3,7 @@ import Button from "../../../../components/ui/Button";
 export default function EmployeeProfileActions({
   orientation = "vertical",
   onEdit,
+  className,
   onDeactivate,
 }) {
   const layout =

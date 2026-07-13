@@ -15,11 +15,10 @@ export default function SearchBar({ className = "", value, onChange , placeholde
       <input
         type="text"
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         className="w-full bg-transparent text-white placeholder:text-black focus:outline-none"
       />
-
     </div>
   );
 }

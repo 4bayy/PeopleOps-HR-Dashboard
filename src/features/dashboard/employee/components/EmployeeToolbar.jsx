@@ -3,10 +3,7 @@ import SearchBar from "../../../../components/ui/Search";
 import Dropdown from "../../../../components/ui/Dropdown";
 // import { departments } from "../../../../data/employee";
 
-function EmployeeToolbar({className}) {
-  
-  const [department, setDepartment] = useState("");
-  const [status, setStatus] = useState(null);
+function EmployeeToolbar({ className ,setStatus, setSearchTerm , department, setDepartment }) {
 
   return (
     <div className={`hidden md:flex items-center gap-4 ${className}`}>
@@ -14,6 +11,7 @@ function EmployeeToolbar({className}) {
         <SearchBar
           className="w-full border"
           placeholder="Search employees..."
+          onChange={setSearchTerm}
         />
       </div>
 
@@ -21,7 +19,7 @@ function EmployeeToolbar({className}) {
         className="w-48"
         label="Departments"
         value={department}
-        onChange={setDepartment}
+        onChange={(e)=>setDepartment(e.target.value)}
         options={[
           { value: "engineering", label: "Engineering" },
           { value: "marketing", label: "Marketing" },
@@ -33,7 +31,7 @@ function EmployeeToolbar({className}) {
         className="w-40"
         label="Statuses"
         value={status}
-        onChange={setStatus}
+        onChange={(e)=>setStatus(e.target.value)}
         options={[
           { value: "active", label: "Active" },
           { value: "inactive", label: "Inactive" },

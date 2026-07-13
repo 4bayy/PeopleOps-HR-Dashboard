@@ -2,7 +2,7 @@ import EmployeeCard from "../../../components/EmployeeCard";
 import Button from "../../../components/ui/Button";
 import SearchBar from "../../../components/ui/Search";
 import { departments } from "../../../data/employee";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import { employee } from "../../../data/employee";
 import EmployeList from "./pages/EmployeeList";
@@ -12,16 +12,39 @@ import EmployeeForm from "./pages/EmployeeForm";
 import EmployeeList from "./pages/EmployeeList";
 
 export default function UserPage() {
-  const [selectedDepartment, setSelectedDepartment] = useState("All");
+  const [selectedDepartment, setSelectedDepartment] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
-
   const [showForm, setShowForm] = useState(false);
+
+  //search debounce input
+  const [searchTerm, setSearchTerm] = useState("");
+  const [status, setStatus] = useState("");
+
+  console.log(" selected dept and status ", selectedDepartment, status);
+
+  const filteredEmployees = employee.filter((item) => {
+    const searchFilter =
+      !searchTerm || item.name.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const deptFilter =
+      !selectedDepartment ||
+      item.department.toLowerCase().includes(selectedDepartment.toLowerCase());
+    const statusFilter =
+      !status || item.status.toLowerCase() === status.toLowerCase();
+
+    return searchFilter && deptFilter && statusFilter;
+  });
 
   return (
     <div className="flex  min-h-screen flex-col ">
       {/*  mobile  */}
-      <SearchBar className="md:hidden lg:hidden" placeholder="Search employees.."> </SearchBar>
+      <SearchBar
+        className="md:hidden lg:hidden"
+        placeholder="Search employees.."
+      >
+        {" "}
+      </SearchBar>
       <div className="mt-4 flex flex-wrap gap-2 md:hidden lg:hidden  ">
         {departments.map((item) => {
           const isSelected = selectedDepartment === item.title;
@@ -59,22 +82,28 @@ export default function UserPage() {
       {/* Tablet & Desktop */}
       {showForm ? (
         // <h1> Add Form Will Be Shown</h1>
-        <EmployeeForm setShowForm={setShowForm} ></EmployeeForm>
+        <EmployeeForm setShowForm={setShowForm}></EmployeeForm>
       ) : (
         <div className="hidden md:block mt-4 rounded p-4 ">
           <EmployeeHeader
             showForm={showForm}
             setShowForm={setShowForm}
           ></EmployeeHeader>
-          <EmployeeToolbar className="mb-4"></EmployeeToolbar>
-          <EmployeeList employee={employee}></EmployeeList>
+          <EmployeeToolbar
+            className="mb-4"
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            setDepartment={setSelectedDepartment}
+            setStatus={setStatus}
+          ></EmployeeToolbar>
+          <EmployeeList employee={filteredEmployees}></EmployeeList>
         </div>
       )}
 
       {/*  float add  btn */}
 
       <Button className="mb-20 right-6  h-14 w-14 rounded-full bg-primary p-0 shadow-lg z-50 hover:bg-primary/90">
-        <Plus className="h-7 w-7 text-black"/>
+        <Plus className="h-7 w-7 text-black" />
       </Button>
     </div>
   );
