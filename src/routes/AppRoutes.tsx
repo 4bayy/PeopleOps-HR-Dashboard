@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "../layout/AppLayout";
 import Home from "../features/dashboard/home";
-import User from "../features/dashboard/user";
-import EmployeeProfile from "../features/dashboard/user/pages/EmployeeProfile";
+import User from "../features/dashboard/employee";
+import EmployeeProfile from "../features/dashboard/employee/pages/EmployeeProfile";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/user",
+        path: "/employee",
         element: <User />,
       },
       {

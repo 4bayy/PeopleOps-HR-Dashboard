@@ -1,12 +1,19 @@
 import { departmentDistribution } from "../../../../data/employee";
 import { PieChart } from "@mui/x-charts/PieChart";
+import { useState } from "react";
 
 export default function DepartmentDistribution({ title }) {
-  const data = departmentDistribution;
+ 
+  const legendData = departmentDistribution;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  console.log(isMobile);
+
+  const   chartData = isMobile ? 
+      departmentDistribution.filter((item)=> item.label === "Engineering"): departmentDistribution;
 
   return (
     <div className="rounded-2xl bg-card p-6  ">
-      <h2 className="mb-4 text-xl font-semibold">{title}</h2>
+      <h2 className="mb-4 text-xl font-semibold text-foreground">{title}</h2>
 
       <div className="grid grid-cols-2 ">
         {/* Chart */}
@@ -16,11 +23,13 @@ export default function DepartmentDistribution({ title }) {
             height={140}
             series={[
               {
-                data,
+                data: chartData,
                 innerRadius: 35,
                 outerRadius: 55,
                 paddingAngle: 3,
                 cornerRadius: 4,
+                startAngle: -225,
+                endAngle: 45,
                 cx: 70,
                 cy: 70,
               },
@@ -34,14 +43,14 @@ export default function DepartmentDistribution({ title }) {
         </div>
 
         {/* distribution department  hide on mobile */}
-        <div className="hidden md:flex flex-col">
-          {data.map((item) => (
-            <div className="inline-flex items-center gap-2">
+        <div className="hidden md:flex flex-col gap-2">
+          {legendData.map((item) => (
+            <div key={item.id} className="flex items-center gap-2">
               <span
-                className="h-3 w-3 rounded-sm "
+                className="h-3 w-3 rounded-sm"
                 style={{ backgroundColor: item.color }}
-              ></span>
-              <span className="text-black">{item.label}</span>
+              />
+              <span className="text-sm text-gray-700">{item.label}</span>
             </div>
           ))}
         </div>

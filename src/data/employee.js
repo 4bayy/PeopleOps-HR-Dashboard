@@ -174,12 +174,12 @@ export const employee= [
 // department distribution 
 
 export const departmentDistribution = [
-  { id: 1, value: 90, label: "Engineering", color: "#4FD1C5" },
-  { id: 2, value: 0, label: "Design", color: "#A78BFA" },
-
-  { id: 3, value: 0, label: "Marketing", color: "#FBBF24" },
+  { id: 1, value: 42, label: "Engineering", color: "#4FD1C5" },
+  { id: 2, value: 18, label: "Design", color: "#A78BFA" },
+  { id: 3, value: 15, label: "Marketing", color: "#FBBF24" },
+  { id: 4, value: 12, label: "Sales", color: "#FF6B57" },
+  { id: 5, value: 8, label: "HR", color: "#6B7280" },
 ];
-
 
 export const departmentOptions = [
   { value: "engineering", label: "Engineering" },

@@ -14,7 +14,7 @@ import {
   },
   {
     label: "Users",
-    path: "/user",
+    path: "/employee",
     icon: Users,
   },
   {

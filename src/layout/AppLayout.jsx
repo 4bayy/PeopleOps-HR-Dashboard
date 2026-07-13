@@ -17,7 +17,7 @@ export default function AppLayout() {
   const formatted = pathName.charAt(0).toUpperCase() + pathName.slice(1);
 
   const hideHeader =
-    ["/user", "/employee/id"].includes(location.pathname) ||
+    ["/employee", "/employee/id"].includes(location.pathname) ||
     location.pathname.startsWith("/employee/");
 
   return (

@@ -35,7 +35,7 @@ export default function MobileDashboard() {
       </Card>
 
       {/* Quick Actions */}
-      <div>
+      <div className="mt-10">
         <h2 className="mb-4 text-lg font-semibold text-foreground">
           Quick Actions
         </h2>

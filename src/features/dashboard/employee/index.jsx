@@ -21,6 +21,7 @@ export default function UserPage() {
   return (
     <div className="flex  min-h-screen flex-col ">
       {/*  mobile  */}
+      <SearchBar className="md:hidden lg:hidden" placeholder="Search employees.."> </SearchBar>
       <div className="mt-4 flex flex-wrap gap-2 md:hidden lg:hidden  ">
         {departments.map((item) => {
           const isSelected = selectedDepartment === item.title;
