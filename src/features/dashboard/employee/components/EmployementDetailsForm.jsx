@@ -1,6 +1,6 @@
 import Card from "../../../../components/ui/Card";
 import Input from "../../../../components/ui/Input";
-import Dropdown from "../../../../components/ui/DropDown";
+import Dropdown from "../../../../components/ui/Dropdown";
 import {
   departmentOptions,
   employmentTypeOptions,
