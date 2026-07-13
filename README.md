@@ -7,7 +7,6 @@ A modern and responsive Employee Management Dashboard built with **React**, **Vi
 🚀 **Deployed on Vercel:**  
 https://people-ops-hr-dashboard.vercel.app/
 
-Explore the live application to experience the responsive UI and employee management features.
 ---
 
 ## ✨ Features
@@ -57,29 +56,6 @@ Explore the live application to experience the responsive UI and employee manage
 
 ---
 
-## 📂 Folder Structure
-
-```
-src/
-│
-├── components/
-│   ├── ui/
-│   ├── layout/
-│   └── shared/
-│
-├── features/
-│   ├── dashboard/
-│   └── employee/
-│       ├── pages/
-│       ├── components/
-│       └── data/
-│
-├── data/
-├── routes/
-├── assets/
-└── App.jsx
-```
-
 ---
 
 ## 🚀 Getting Started
@@ -124,116 +100,11 @@ npm run preview
 
 ---
 
-## Current Functionality
-
-### Dashboard
-
-- Employee statistics
-- Department overview
-- Attendance section
-- Quick actions
-
-### Employee Module
-
-- View employees
-- Add employee
-- View employee profile
-- Responsive employee table
-- Mobile employee cards
-
----
-
-# 🚧 Planned Improvements
-
-## Employee Management
-
-- [ ] Edit Employee
-- [ ] Delete Employee
-- [ ] Employee Search
-- [ ] Department Filter
-- [ ] Status Filter
-- [ ] Pagination
-- [ ] Sorting
-
----
-
-## Dashboard
-
-- [ ] Connect dashboard to API
-- [ ] Dynamic charts
-
-
----
-
-## Form Improvements
-
-- [ ] Client-side validation
-- [ ] Server-side validation
-- [ ] Success & error messages
-- [ ] Image preview
-
----
-
-## UX Improvements
-
-- [ ] Loading Skeletons
-- [ ] Error Pages
-- [ ] Confirmation Dialogs
-- [ ] Toast Notifications
-
----
 
 ## Backend Integration
 
-- [ ] REST API integration
-- [ ] Authentication
-- [ ] Authorization
-- [ ] Employee CRUD
-- [ ] Image Upload API
-
----
-
 ## Performance
 
-- [ ] Lazy loading
-- [ ] Code splitting
-- [ ] Memoization
-- [ ] Bundle optimization
-
----
-
-## Testing
-
-- [ ] Unit Tests
-- [ ] Integration Tests
-- [ ] React Testing Library
-
----
 
 ## Accessibility
 
-- [ ] Keyboard Navigation
-- [ ] Screen Reader Support
-- [ ] Focus Management
-- [ ] ARIA Labels
-
----
-
-
----
-
-## Screens
-
-- Dashboard
-- Employee List
-- Add Employee
-- Employee Profile
-- Error Pages
-
----
-
-## Author
-
-Developed by **Abay**
-
-Software Engineer
